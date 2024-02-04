@@ -1,0 +1,174 @@
+<toolbox>
+  <category name="lekirbot" colour="155">
+  
+    <!-- LED OUTPUT -->
+  
+    <block type="lekirbot_led"></block>
+    <block type="lekirbot_megablink">
+      <value name="DELAY">
+        <block type="math_number">
+          <field name="NUM">100</field>
+        </block>
+      </value>
+    </block>
+    <block type="lekirbot_knightrider">
+      <value name="DELAY">
+        <block type="math_number">
+          <field name="NUM">100</field>
+        </block>
+      </value>
+    </block>
+  
+    <!-- MOTOR OUTPUT -->
+  
+    <block type="lekirbot_motor_steer">
+      <value name="SPEED">
+        <block type="math_number">
+          <field name="NUM">0</field>
+        </block>
+      </value>
+    </block>
+    <block type="lekirbot_motor_tank">
+      <value name="SPEEDL">
+        <block type="math_number">
+          <field name="NUM">0</field>
+        </block>
+      </value>
+      <value name="SPEEDR">
+        <block type="math_number">
+          <field name="NUM">0</field>
+        </block>
+      </value>
+    </block>
+    <block type="lekirbot_motor_stop"></block>
+  
+    <!-- TRACER -->
+    <block type="lekirbot_calibrate"></block>
+    <block type="lekirbot_tracer">
+      <value name="LeftRight">
+        <block type="math_number">
+          <field name="NUM">100</field>
+        </block>
+      </value>
+      <value name="Kp">
+        <block type="math_number">
+          <field name="NUM">0.1</field>
+        </block>
+      </value>
+      <value name="Kd">
+        <block type="math_number">
+          <field name="NUM">0.2</field>
+        </block>
+      </value>
+    </block>
+    <block type="lekirbot_dtracer">
+      <value name="LeftRight">
+        <block type="math_number">
+          <field name="NUM">100</field>
+        </block>
+      </value>
+      <value name="Kp">
+        <block type="math_number">
+          <field name="NUM">0.1</field>
+        </block>
+      </value>
+      <value name="Kd">
+        <block type="math_number">
+          <field name="NUM">0.2</field>
+        </block>
+      </value>
+      <value name="Delay">
+        <block type="math_number">
+          <field name="NUM">200</field>
+        </block>
+      </value>
+    </block>
+    <block type="lekirbot_tillJunction">
+      <value name="LeftRight">
+        <block type="math_number">
+          <field name="NUM">100</field>
+        </block>
+      </value>
+      <value name="turnspeed">
+        <block type="math_number">
+          <field name="NUM">100</field>
+        </block>
+      </value>
+      <value name="Kp">
+        <block type="math_number">
+          <field name="NUM">0.1</field>
+        </block>
+      </value>
+      <value name="Kd">
+        <block type="math_number">
+          <field name="NUM">0.2</field>
+        </block>
+      </value>
+      <value name="forwarddelay">
+        <block type="math_number">
+          <field name="NUM">50</field>
+        </block>
+      </value>
+      <value name="turndelay">
+        <block type="math_number">
+          <field name="NUM">50</field>
+        </block>
+      </value>
+    </block>
+    <block type="lekirbot_turn_at_center">
+      <value name="speed">
+        <block type="math_number">
+          <field name="NUM">100</field>
+        </block>
+      </value>
+      <value name="sensorc">
+        <block type="math_number">
+          <field name="NUM">900</field>
+        </block>
+      </value>
+    </block>
+    <block type="lekirbot_findline">
+      <value name="LeftRight">
+        <block type="math_number">
+          <field name="NUM">100</field>
+        </block>
+      </value>
+  
+      <value name="Sensor">
+        <block type="math_number">
+          <field name="NUM">200</field>
+        </block>
+      </value>
+    </block>
+  
+    <!-- SENSOR -->
+    <block type="lekirbot_linesensor"></block>
+    <block type="lekirbot_ultrasonic_read"></block>
+    <block type="lekirbot_ldr"></block>
+  
+    <!-- ACTUATOR -->
+    <block type="lekirbot_gripper">
+      <value name="GRIP">
+        <block type="math_number">
+          <field name="NUM">0</field>
+        </block>
+      </value>
+    </block>
+    <block type="lekirbot_servo_move">
+      <value name="DEGREE">
+        <block type="math_number">
+          <field name="NUM">30</field>
+        </block>
+      </value>
+      <value name="delayx">
+        <block type="math_number">
+          <field name="NUM">1000</field>
+        </block>
+      </value>
+    </block>
+
+  
+
+  
+  </category>
+</toolbox>

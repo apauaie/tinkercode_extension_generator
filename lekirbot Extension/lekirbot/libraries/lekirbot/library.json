@@ -1,0 +1,23 @@
+{
+  "name": "lekirbot",
+  "keywords": "line following Robot",
+  "description": "Arduino Library for lekirbot",
+  "authors":
+  [
+    {
+      "name": "Fauzan Khairi",
+      "email": "apauaie@gmail.com",
+      "maintainer": true
+    }
+  ],
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/apauaie/lekirbot.git"
+  },
+  "version": "0.0.1",
+  "license": "MIT",
+  "frameworks": "arduino",
+  "platforms": "*",
+  "headers": "lekirbot.h"
+}

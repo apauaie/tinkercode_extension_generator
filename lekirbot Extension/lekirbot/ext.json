@@ -1,0 +1,26 @@
+{
+  "name": "lekirbot",
+  "keywords": "lekirbot",
+  "description": "Tinkercode Extension for lekirbot",
+  "authors": [
+    {
+      "name": "Fauzan Khairi",
+      "email": "apauaie@gmail.com",
+      "maintainer": true
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apauaie/lekirbot.git"
+  },
+  "files_link": {
+    "block": "extensions/lekirbot/blocks/lekirbot/lekirbot.js",
+    "generator": "extensions/lekirbot/generators/lekirbot/lekirbot.js",
+    "toolbox": "extensions/lekirbot/toolbox/lekirbot.xml"
+  },
+  "version": "0.0.1",
+  "license": "MIT",
+  "frameworks": "arduino",
+  "platforms": "*",
+  "headers": "lekirbot.h"
+}
