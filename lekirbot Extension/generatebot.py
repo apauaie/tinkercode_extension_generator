@@ -150,6 +150,7 @@ def zip_directory_contents(directory_path, zip_filename):
 # Create the main window
 root = tk.Tk()
 root.title("TinkerCode Extension Generator")
+root.wm_attributes('-toolwindow', True)
 
 # Create and place the label for displaying the uploaded image
 bot_label = tk.Label(root,text="Bot Name")
@@ -170,7 +171,7 @@ image_label = tk.Label(root)
 image_label.pack(pady=5)
 
 # Create and place the "Generate" button
-generate_button = tk.Button(root, text="Generate Extension", command=generate_and_zip, state= "disabled")
+generate_button = tk.Button(root, text="Generate Extension", command=generate_and_zip, state= "disabled",font=('Times New Roman', 10, 'bold'))
 generate_button.pack(pady=5)
 
 # Start the Tkinter event loop
