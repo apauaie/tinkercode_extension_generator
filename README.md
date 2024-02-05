@@ -1,3 +1,5 @@
+Use this files at your own risk.
+
 These files are generator files to create extension zip file for use with Tinkercode apps. It will generate a standard extension with same pin connection as Lekirbot. Please refer to the Lekirbot PCB. 
 Content of this github is divided into two:
 1. PCB Design with KICAD for LekirBot. It is a simple line following robot with 5 QRE1113 sensors, 2 servo connections, 1 ultrasonic connection, built in TB6612FNG Motor Driver
