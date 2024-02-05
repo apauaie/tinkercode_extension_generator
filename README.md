@@ -23,16 +23,21 @@ Download KICAD to modify these files. https://www.kicad.org/download/
 **Instruction to use Extension Generator Files**
 Download the files from Github
 Place GeneratorBot.exe and lekirbot folder in the same folder.
+
+
 ![image](https://github.com/apauaie/tinkercode_extension_generator/blob/main/media/Folder.png)<br>
 
 
 Run GeneratorBot.exe to generate extension zip file. Insert your Robot name and Robot Image.
+
 ![image](https://github.com/apauaie/tinkercode_extension_generator/blob/main/media/GenerateBot.png)<br>
 
 In Tinkercode Apps, press the Extension (Spanar Icon) button to upload the zip files. 
+
 ![image](https://github.com/apauaie/tinkercode_extension_generator/blob/main/media/spanar.png))<br>
 
 ![image](https://github.com/apauaie/tinkercode_extension_generator/blob/main/media/extension.png))<br>
+
 
 Check if your upload is successful by going to the extension menu
 ![image](https://github.com/apauaie/tinkercode_extension_generator/blob/main/media/example.png))<br>
