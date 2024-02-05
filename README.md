@@ -1,4 +1,4 @@
-Use this files at your own risk.
+Use these files at your own risk.
 
 These files are generator files to create extension zip file for use with Tinkercode apps. It will generate a standard extension with same pin connection as Lekirbot. Please refer to the Lekirbot PCB. 
 Content of this github is divided into two:
