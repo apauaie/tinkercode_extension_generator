@@ -1,4 +1,0 @@
-(fp_lib_table
-  (version 7)
-  (lib (name "lekirbot")(type "KiCad")(uri "$(KIPRJMOD)/lekirbot.pretty")(options "")(descr ""))
-)

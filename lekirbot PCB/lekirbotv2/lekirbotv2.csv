@@ -1,0 +1,27 @@
+Comment,Type,Designator,Quantity,Footprint,LCSC,Fabrication Process
+ARDUINO_NANO 15 Pin Female Connector,Connector,ARDUINO_NANO1,2,lekirbot:ARDUINO_NANO,,Soldering
+CONN_02  2 pin Female,Connector,"BATT0,LDR0",2,lekirbot:1X02,,Soldering
+100n,Capacitor,"C1,C6,C7",3,lekirbot:C0603-ROUND,,Soldering
+22UF-0805-6.3V-20%,Capacitor,C2,1,lekirbot:0805,,Soldering
+LED-FKIT-1206,LED,"D1,D2,D3,D4,D5",5,lekirbot:FKIT-LED-1206,,Soldering
+DIODE-SCHOTTKY-SS14,Diode,D7,1,lekirbot:SMA-DIODE,,Soldering
+MountingHole,Hole,"H1,H2,H3,H4,H5,H6,H7,H8,H9,H10",,MountingHole:MountingHole_3.2mm_M3,,Soldering
+7404D,Inverter,IC3,1,lekirbot:SO14,,Soldering
+CONN_3 3 pin Female,Connector,"J1,J2",2,lekirbot:1X03,,Soldering
+Conn_04 4 pin Female,Connector,J3,1,Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical,,Soldering
+CONN_01 1 pin Female,Connector,"M1A0,M1B0,M2A0,M2B0",4,lekirbot:1X01,,Soldering
+100OHM-0603-1/10W-1%,Resistor,"R1,R2,R3,R4,R5,R16",6,lekirbot:0603,,Soldering
+1kOHM-0603-1/10W-1%,Resistor,R17,1,lekirbot:0603,,Soldering
+10KOHM-0603,Resistor,"R6,R8,R10,R12,R14",5,lekirbot:0603-RES,,Soldering
+100OHM-0603-0.25W-1%,Resistor,"R7,R9,R11,R13,R15",5,lekirbot:0603-RES,,Soldering
+EG1213,Switch Slide,S2X0,1,lekirbot:EG1213,,Soldering
+SW_Push,Switch Push,SW1,1,Button_Switch_THT:SW_PUSH_6mm,,Soldering
+TB6612FNG,Motor Driver IC,U1,1,ROB-14450:MODULE_ROB-14450,,Soldering
+QRE11131:1,Infrared Sensor,"U2,U5,U6,U7,U8",5,lekirbot:QRE1113-1_1,,Soldering
+N20 Motor,Motor,,2,,,Assembly
+N20 Motor Bracket,Bracket,,2,,,Assembly
+Wheel,Wheel,,2,,,Assembly
+Arduino Nano,Arduino Nano,,1,,,Assembly
+7.4V Battery Lipo,Battery,,1,,,Assembly
+Lipo Battery Charger,Battery,,1,,,Assembly
+USB Cable Programming,Cable,,1,,,
