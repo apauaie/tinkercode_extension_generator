@@ -3,13 +3,17 @@ import re
 import shutil
 import zipfile
 import tkinter as tk
+from tkinter import ttk
+
 from tkinter import filedialog
 from PIL import Image, ImageTk
+from tkinter import colorchooser
 import os.path
 
 
 
 global image_path
+global color_code
 
 def upload_image():
 	file_path = filedialog.askopenfilename(filetypes=[('Image Files', '*.png')])
@@ -46,20 +50,28 @@ def load_and_display_image(file_path):
 	
 
 def generate_and_zip():
+	global color_code
 	directory_path = "lekirbot"
+	
 	old_text = "lekirbot"
 	new_dir = "lekirbot_duplicate"
 	new_name = text_output.get('1.0','end-1c')
+	color_directory_path="lekirbot/extensions/"+new_name+"/blocks/"+new_name+"/"+new_name+".js"
+	colori= "=\""+color_code+"\""
+	old_color="=155"
 	if (new_name!=""):
 		duplicate_folder(directory_path, new_dir)
 		# Rename files and replace text
 		rename_files_and_folders(directory_path,old_text, new_name)
 		print("Files and folders renamed successfully.")
+		replace_text_in_file(color_directory_path,old_color, colori)
+		print("Block Color Updated successfully.")
 		# print(f"Zip file '{zip_filename}' created.")
 		os.rename("lekirbot",new_name)
 		os.rename("lekirbot_duplicate","lekirbot")
 		file_extensions = [".js", ".xml", ".cpp", ".h",".json"]
 		rename_text_in_files(new_name, old_text, new_name, file_extensions)
+
 		# # Create a zip file of the newly renamed files and folders
 		
 		# print(f"Contents of '{directory_path}' zipped successfully to '{zip_filename}'.")
@@ -76,6 +88,7 @@ def generate_and_zip():
 		os.remove(new_name+".zip")
 
 		shutil.rmtree(new_name)
+		
 	else:
 		print("Please insert File/Bot Name")
 	generate_button['state'] = tk.DISABLED
@@ -108,8 +121,8 @@ def rename_files_and_folders(directory_path, old_text, new_text):
 			new_path = os.path.join(root, folder.replace(old_text, new_text))
 			os.rename(original_path, new_path)
 			# print("Rename"+original_path+"to"+new_path)
-				
-		
+			
+
 def replace_text_in_file(file_path, new_name):
 	with open(file_path, 'r') as file:
 		content = file.read()
@@ -146,7 +159,13 @@ def zip_directory_contents(directory_path, zip_filename):
 				arcname = os.path.relpath(file_path, directory_path)
 				zipf.write(file_path, arcname)
 
-
+def choose_color():	
+	global color_code
+	
+	# variable to store hexadecimal code of color
+	color_code = colorchooser.askcolor(title ="Choose color") 
+	color_code=color_code[1]
+	color_button.configure(bg=color_code)
 # Create the main window
 root = tk.Tk()
 root.title("TinkerCode Extension Generator")
@@ -156,15 +175,27 @@ root.wm_attributes('-toolwindow', True)
 bot_label = tk.Label(root,text="Bot Name")
 bot_label.pack(padx=1,pady=1)
 
+
 # Create and place the textbox
 text_output = tk.Text(root, height=1, width=10,font=('Times New Roman', 23, 'bold'))
 text_output.tag_configure("center", justify='center')
 text_output.pack(pady=3)
 
 
+f1=tk.Frame(root)
+f1.pack(expand=1)
+# Create and place the button to select color
+# Create and place the button to select color
+color_button = tk.Button(f1, width=2,text = "",bg="blue",
+				   command = choose_color)
+color_button.pack(expand=True,side=tk.LEFT)
+
 # Create and place the image upload button
-upload_button = tk.Button(root, text="Select Bot Image", command=upload_image)
-upload_button.pack(pady=5)
+upload_button = tk.Button(f1,width=18, text="Select Bot Image", command=upload_image)
+upload_button.pack(expand=True,side=tk.LEFT)
+
+
+
 
 # Create and place the label for displaying the uploaded image
 image_label = tk.Label(root)
