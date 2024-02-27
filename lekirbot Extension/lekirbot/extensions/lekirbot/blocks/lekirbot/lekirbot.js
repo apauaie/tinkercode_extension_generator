@@ -2,12 +2,12 @@ goog.provide("Blockly.Blocks.lekirbot");
 goog.require("Blockly.Blocks");
 goog.require("Blockly.Types");
 
-
+var warna=155;
 //LED Output
 Blockly.Blocks["lekirbot_led"] = {
   helpUrl: "",
   init: function () {
-    this.setColour(155);
+    this.setColour(warna);
     this.appendDummyInput()
       .appendField("lekirbot LED")
       .appendField(
@@ -45,7 +45,7 @@ Blockly.Blocks["lekirbot_led"] = {
 Blockly.Blocks["lekirbot_megablink"] = {
   helpUrl: "",
   init: function () {
-    this.setColour(155);
+    this.setColour(warna);
     this.appendDummyInput()
       .appendField("lekirbot Megablink")
       .appendField(
@@ -64,7 +64,7 @@ Blockly.Blocks["lekirbot_megablink"] = {
 Blockly.Blocks["lekirbot_knightrider"] = {
   helpUrl: "",
   init: function () {
-    this.setColour(155);
+    this.setColour(warna);
     this.appendDummyInput()
       .appendField("lekirbot Running Light")
       .appendField(
@@ -123,7 +123,7 @@ Blockly.Blocks["lekirbot_motor_steer"] = {
         "right",
       ],
     ];
-    this.setColour(155);
+    this.setColour(warna);
     this.appendDummyInput()
       .appendField("lekirbot STEER")
       .appendField(
@@ -166,7 +166,7 @@ Blockly.Blocks["lekirbot_motor_tank"] = {
       ],
     ];
 
-    this.setColour(155);
+    this.setColour(warna);
     this.appendDummyInput()
       .appendField("lekirbot TANK")
       .appendField(
@@ -193,7 +193,7 @@ Blockly.Blocks["lekirbot_motor_tank"] = {
 Blockly.Blocks["lekirbot_motor_stop"] = {
   helpUrl: "",
   init: function () {
-    this.setColour(155);
+    this.setColour(warna);
     this.appendDummyInput().appendField("lekirbot Motor Stop");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -204,7 +204,7 @@ Blockly.Blocks["lekirbot_motor_stop"] = {
 Blockly.Blocks["lekirbot_calibrate"] = {
   helpUrl: "http://www.arduino.cc/playground/",
   init: function () {
-    this.setColour(155);
+    this.setColour(warna);
     this.appendDummyInput().appendField("lekirbot Calibrate Line Sensor");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -235,7 +235,7 @@ Blockly.Blocks["lekirbot_tracer"] = {
         "0",
       ],
     ];
-    this.setColour(155);
+    this.setColour(warna);
     this.appendDummyInput()
       .appendField("lekirbot Line Tracer")
       .appendField(
@@ -287,7 +287,7 @@ Blockly.Blocks["lekirbot_dtracer"] = {
         "0",
       ],
     ];
-    this.setColour(155);
+    this.setColour(warna);
     this.appendDummyInput()
       .appendField("lekirbot Tracer with Delay")
       .appendField(
@@ -427,7 +427,7 @@ Blockly.Blocks["lekirbot_tillJunction"] = {
         "2",
       ],
     ];
-    this.setColour(155);
+    this.setColour(warna);
     this.appendDummyInput()
       .appendField("lekirbot Till Junction")
       .appendField(
@@ -514,7 +514,7 @@ Blockly.Blocks["lekirbot_turn_at_center"] = {
         "0",
       ],
     ];
-    this.setColour(155);
+    this.setColour(warna);
     this.appendDummyInput()
       .appendField("lekirbot Turn at Center")
       .appendField(
@@ -557,7 +557,7 @@ Blockly.Blocks["lekirbot_findline"] = {
         "0",
       ],
     ];
-    this.setColour(155);
+    this.setColour(warna);
     this.appendDummyInput()
       .appendField("lekirbot Find Line")
       .appendField(
@@ -583,7 +583,7 @@ Blockly.Blocks["lekirbot_findline"] = {
 Blockly.Blocks["lekirbot_linesensor"] = {
   helpUrl: "http://arduino.cc/en/Reference/AnalogRead",
   init: function () {
-    this.setColour(155);
+    this.setColour(warna);
     this.appendDummyInput()
       .appendField("lekirbot Line Sensor")
       .appendField(
@@ -604,7 +604,7 @@ Blockly.Blocks["lekirbot_linesensor"] = {
 Blockly.Blocks["lekirbot_ultrasonic_read"] = {
   helpUrl: "http://arduino.cc/en/Reference/Ultrasonic",
   init: function () {
-    this.setColour(155);
+    this.setColour(warna);
     this.appendDummyInput()
       .appendField(
         new Blockly.FieldImage("blocks/makerkit/media/SR04.png", 64, 64)
@@ -618,7 +618,7 @@ Blockly.Blocks["lekirbot_ultrasonic_read"] = {
 Blockly.Blocks["lekirbot_ldr"] = {
   helpUrl: "http://arduino.cc/en/Reference/AnalogRead",
   init: function () {
-    this.setColour(155);
+    this.setColour(warna);
     this.appendDummyInput()
       .appendField(
         new Blockly.FieldImage("blocks/makerkit/media/ldr-png.png", 64, 64)
@@ -632,7 +632,7 @@ Blockly.Blocks["lekirbot_ldr"] = {
 Blockly.Blocks["lekirbot_ext_button"] = {
   helpUrl: "http://arduino.cc/en/Reference/DigitalRead",
   init: function () {
-    this.setColour(155);
+    this.setColour(warna);
     this.appendDummyInput()
       .appendField("lekirbot IO Extender Button")
       .appendField(
@@ -661,7 +661,7 @@ Blockly.Blocks["lekirbot_ext_button"] = {
 Blockly.Blocks["lekirbot_gripper"] = {
   helpUrl: "",
   init: function () {
-    this.setColour(155);
+    this.setColour(warna);
     this.appendDummyInput()
       .appendField("lekirbot Gripper")
       .appendField(
@@ -688,7 +688,7 @@ Blockly.Blocks["lekirbot_gripper"] = {
 Blockly.Blocks["lekirbot_servo_move"] = {
   helpUrl: "http://www.arduino.cc/playground/ComponentLib/servo",
   init: function () {
-    this.setColour(155);
+    this.setColour(warna);
     this.appendDummyInput()
       .appendField("Servo")
       .appendField(
@@ -721,7 +721,7 @@ Blockly.Blocks["lekirbot_servo_move"] = {
 Blockly.Blocks["lekirbot_bluetooth_ready"] = {
   helpUrl: "http://arduino.cc/en/Reference/bluetooth",
   init: function () {
-    this.setColour(155);
+    this.setColour(warna);
     this.appendDummyInput()
       .appendField("lekirbot Bluetooth Data Ready?")
       .appendField(
@@ -737,7 +737,7 @@ Blockly.Blocks["lekirbot_bluetooth_ready"] = {
 Blockly.Blocks["lekirbot_bluetooth_data"] = {
   helpUrl: "http://arduino.cc/en/Reference/bluetooth",
   init: function () {
-    this.setColour(155);
+    this.setColour(warna);
     this.appendDummyInput()
       .appendField("Read lekirbot Bluetooth Data")
       .appendField(
@@ -754,7 +754,7 @@ Blockly.Blocks["lekirbot_bluetooth_data"] = {
 Blockly.Blocks["lekirbot_sound"] = {
   helpUrl: "",
   init: function () {
-    this.setColour(155);
+    this.setColour(warna);
     this.appendDummyInput()
       .appendField("Play Sound")
       .appendField(
@@ -856,7 +856,7 @@ Blockly.Blocks["lekirbot_path_finder"] = {
       ],
     ];
 
-    this.setColour(155);
+    this.setColour(warna);
     this.appendDummyInput()
       .appendField("lekirbot Path Finder")
       .appendField(

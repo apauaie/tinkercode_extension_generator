@@ -32,7 +32,7 @@ Blockly.Arduino.lekirbot_led = function() {
 	var dropdown_pin = this.getFieldValue('LEDx');
 	var dropdown_stat = this.getFieldValue('STAT');
 	Blockly.Arduino.definitions_['define_lekirbot'] = '#include <lekirbot.h>\n';
-	Blockly.Arduino.definitions_['var_lekirbot'] = 'lekirbot bot((unsigned char[]) { A6, A3, A2, A1, A0} ,5, 4, QTR_NO_EMITTER_PIN);\n';
+	Blockly.Arduino.definitions_['var_lekirbot'] = 'lekirbot bot((unsigned char[]) { sens1, sens2, sens3, sens4, sens5} ,5, 4, QTR_NO_EMITTER_PIN);\n';
 	var code = 'bot.LED('+dropdown_pin+',"'+ dropdown_stat+'");\n'
 	return code;
 };
@@ -59,7 +59,7 @@ Blockly.Arduino.lekirbot_ext_buzzer = function() {
 Blockly.Arduino.lekirbot_megablink = function() {
 	var value_delay = Blockly.Arduino.valueToCode(this, 'DELAY', Blockly.Arduino.ORDER_ATOMIC);
 	Blockly.Arduino.definitions_['define_lekirbot'] = '#include <lekirbot.h>\n';
-	Blockly.Arduino.definitions_['var_lekirbot'] = 'lekirbot bot((unsigned char[]) { A6, A3, A2, A1, A0} ,5, 4, QTR_NO_EMITTER_PIN);\n';
+	Blockly.Arduino.definitions_['var_lekirbot'] = 'lekirbot bot((unsigned char[]) { sens1, sens2, sens3, sens4, sens5} ,5, 4, QTR_NO_EMITTER_PIN);\n';
 	var code = 'bot.megablink('+value_delay+');\n'
 	return code;
 };
@@ -67,7 +67,7 @@ Blockly.Arduino.lekirbot_megablink = function() {
 Blockly.Arduino.lekirbot_knightrider = function() {
 	var value_delay = Blockly.Arduino.valueToCode(this, 'DELAY', Blockly.Arduino.ORDER_ATOMIC);
 	Blockly.Arduino.definitions_['define_lekirbot'] = '#include <lekirbot.h>\n';
-	Blockly.Arduino.definitions_['var_lekirbot'] = 'lekirbot bot((unsigned char[]) { A6, A3, A2, A1, A0} ,5, 4, QTR_NO_EMITTER_PIN);\n';
+	Blockly.Arduino.definitions_['var_lekirbot'] = 'lekirbot bot((unsigned char[]) { sens1, sens2, sens3, sens4, sens5} ,5, 4, QTR_NO_EMITTER_PIN);\n';
 	var code = 'bot.knightrider('+value_delay+');\n'
 	return code;
 };
@@ -78,7 +78,7 @@ Blockly.Arduino.lekirbot_motor_steer = function() {
 	var dropdown_dir = this.getFieldValue('DIR');
 	var value_speed = Blockly.Arduino.valueToCode(this, 'SPEED', Blockly.Arduino.ORDER_ATOMIC);
 	Blockly.Arduino.definitions_['define_lekirbot'] = '#include <lekirbot.h>\n';
-	Blockly.Arduino.definitions_['var_lekirbot'] = 'lekirbot bot((unsigned char[]) { A6, A3, A2, A1, A0} ,5, 4, QTR_NO_EMITTER_PIN);\n';
+	Blockly.Arduino.definitions_['var_lekirbot'] = 'lekirbot bot((unsigned char[]) { sens1, sens2, sens3, sens4, sens5} ,5, 4, QTR_NO_EMITTER_PIN);\n';
 	var code = 'bot.motorsteer("'+dropdown_dir+'",'+ value_speed+');\n'
 	return code;
 };
@@ -89,7 +89,7 @@ Blockly.Arduino.lekirbot_motor_tank = function() {
 	var value_speedl = Blockly.Arduino.valueToCode(this, 'SPEEDL', Blockly.Arduino.ORDER_ATOMIC);
 	var value_speedr = Blockly.Arduino.valueToCode(this, 'SPEEDR', Blockly.Arduino.ORDER_ATOMIC);
 	Blockly.Arduino.definitions_['define_lekirbot'] = '#include <lekirbot.h>\n';
-	Blockly.Arduino.definitions_['var_lekirbot'] = 'lekirbot bot((unsigned char[]) { A6, A3, A2, A1, A0} ,5, 4, QTR_NO_EMITTER_PIN);\n';
+	Blockly.Arduino.definitions_['var_lekirbot'] = 'lekirbot bot((unsigned char[]) { sens1, sens2, sens3, sens4, sens5} ,5, 4, QTR_NO_EMITTER_PIN);\n';
 	var code = 'bot.motortank("'+dropdown_dirl+'",'+ value_speedl+',"'+dropdown_dirr+'",'+ value_speedr+');\n'
 	return code;
 };
@@ -98,15 +98,15 @@ Blockly.Arduino.lekirbot_motor_stop = function() {
 	var dropdown_dir = this.getFieldValue('DIR');
 	var value_speed = Blockly.Arduino.valueToCode(this, 'SPEED', Blockly.Arduino.ORDER_ATOMIC);
 	Blockly.Arduino.definitions_['define_lekirbot'] = '#include <lekirbot.h>\n';
-	Blockly.Arduino.definitions_['var_lekirbot'] = 'lekirbot bot((unsigned char[]) { A6, A3, A2, A1, A0} ,5, 4, QTR_NO_EMITTER_PIN);\n';
+	Blockly.Arduino.definitions_['var_lekirbot'] = 'lekirbot bot((unsigned char[]) { sens1, sens2, sens3, sens4, sens5} ,5, 4, QTR_NO_EMITTER_PIN);\n';
 	var code = 'bot.motorsteer("STOP",0);\n'
 	return code;
 };
 
 Blockly.Arduino.lekirbot_calibrate = function() {
 	Blockly.Arduino.definitions_['define_lekirbot'] = '#include <lekirbot.h>\n';
-	Blockly.Arduino.definitions_['var_lekirbot'] = 'lekirbot bot((unsigned char[]) { A6, A3, A2, A1, A0} ,5, 4, QTR_NO_EMITTER_PIN);\n';
-	Blockly.Arduino.setups_['lekirbot_motor_lib']='bot.Motor(6,5,2,3);';
+	Blockly.Arduino.definitions_['var_lekirbot'] = 'lekirbot bot((unsigned char[]) { sens1, sens2, sens3, sens4, sens5} ,5, 4, QTR_NO_EMITTER_PIN);\n';
+	Blockly.Arduino.setups_['lekirbot_motor_lib']='bot.Motor(PWM1, PWM2, dir1, dir2);';
 	// get the device ID, this is just a test to see if we're connected
 	var code='bot.calibrate();\n';
 	return code;
@@ -121,7 +121,7 @@ Blockly.Arduino.lekirbot_tracer = function() {
 	var kd = Blockly.Arduino.valueToCode(this, 'Kd', Blockly.Arduino.ORDER_ATOMIC);
 	var sensor = 100;///not used i think , FKCH
 	Blockly.Arduino.definitions_['define_lekirbot'] = '#include <lekirbot.h>\n';
-	Blockly.Arduino.definitions_['var_lekirbot'] = 'lekirbot bot((unsigned char[]) { A6, A3, A2, A1, A0} ,5, 4, QTR_NO_EMITTER_PIN);\n';     Blockly.Arduino.setups_['lekirbot_motor_lib']='bot.Motor(6,5,2,3);';
+	Blockly.Arduino.definitions_['var_lekirbot'] = 'lekirbot bot((unsigned char[]) { sens1, sens2, sens3, sens4, sens5} ,5, 4, QTR_NO_EMITTER_PIN);\n';     Blockly.Arduino.setups_['lekirbot_motor_lib']='bot.Motor(PWM1, PWM2, dir1, dir2);';
 	// get the device ID, this is just a test to see if we're connected
 	var code='bot.pid_line('+leftright+', '+leftright+', '+turn+', '+base+', '+kp+','+ kd+', '+linetype+', '+sensor+');\n';
 	return code;
@@ -136,8 +136,8 @@ Blockly.Arduino.lekirbot_dtracer = function() {
 	var linef = this.getFieldValue('line');
 	var delay = Blockly.Arduino.valueToCode(this, 'Delay', Blockly.Arduino.ORDER_ATOMIC);
 	Blockly.Arduino.definitions_['define_lekirbot'] = '#include <lekirbot.h>\n';
-	Blockly.Arduino.definitions_['var_lekirbot'] = 'lekirbot bot((unsigned char[]) { A6, A3, A2, A1, A0} ,5, 4, QTR_NO_EMITTER_PIN);\n';  
-	Blockly.Arduino.setups_['lekirbot_motor_lib']='bot.Motor(6,5,2,3);';
+	Blockly.Arduino.definitions_['var_lekirbot'] = 'lekirbot bot((unsigned char[]) { sens1, sens2, sens3, sens4, sens5} ,5, 4, QTR_NO_EMITTER_PIN);\n';  
+	Blockly.Arduino.setups_['lekirbot_motor_lib']='bot.Motor(PWM1, PWM2, dir1, dir2);';
 	var code='bot.lekirbotDtracer('+leftright+', '+leftright+', '+turn+', '+kp+','+ kd+', '+sensor+','+linef+','+delay+');\n';
 	return code;
 };
@@ -156,8 +156,8 @@ Blockly.Arduino.lekirbot_tillJunction = function() {
 	var turndelay = Blockly.Arduino.valueToCode(this, 'turndelay', Blockly.Arduino.ORDER_ATOMIC);
 	var maxspeed = 255;
 	Blockly.Arduino.definitions_['define_lekirbot'] = '#include <lekirbot.h>\n';
-	Blockly.Arduino.definitions_['var_lekirbot'] = 'lekirbot bot((unsigned char[]) { A6, A3, A2, A1, A0} ,5, 4, QTR_NO_EMITTER_PIN);\n';  
-	Blockly.Arduino.setups_['lekirbot_motor_lib']='bot.Motor(6,5,2,3);';
+	Blockly.Arduino.definitions_['var_lekirbot'] = 'lekirbot bot((unsigned char[]) { sens1, sens2, sens3, sens4, sens5} ,5, 4, QTR_NO_EMITTER_PIN);\n';  
+	Blockly.Arduino.setups_['lekirbot_motor_lib']='bot.Motor(PWM1, PWM2, dir1, dir2);';
 	// get the device ID, this is just a test to see if we're connected
 	if (linef==0)
 	var code='bot.lekirbotFinderBlack('+junction+','+action+','+leftright+','+turnspeed+','+kp+','+ kd+','+forwarddelay+','+turndelay+');\n';
@@ -172,7 +172,7 @@ Blockly.Arduino.lekirbot_turn_at_center = function() {
 	var base = Blockly.Arduino.valueToCode(this, 'speed', Blockly.Arduino.ORDER_ATOMIC);
 	var sensorc = 900;
 	Blockly.Arduino.definitions_['define_lekirbot'] = '#include <lekirbot.h>\n';
-	Blockly.Arduino.definitions_['var_lekirbot'] = 'lekirbot bot((unsigned char[]) { A6, A3, A2, A1, A0} ,5, 4, QTR_NO_EMITTER_PIN);\n';     Blockly.Arduino.setups_['lekirbot_motor_lib']='bot.Motor(6,5,2,3);';
+	Blockly.Arduino.definitions_['var_lekirbot'] = 'lekirbot bot((unsigned char[]) { sens1, sens2, sens3, sens4, sens5} ,5, 4, QTR_NO_EMITTER_PIN);\n';     Blockly.Arduino.setups_['lekirbot_motor_lib']='bot.Motor(PWM1, PWM2, dir1, dir2);';
 	// get the device ID, this is just a test to see if we're connected
 	var code='bot.turn_at_center('+direction+', '+base+','+sensorc+', '+linetype+');\n';
 	return code;
@@ -183,8 +183,8 @@ Blockly.Arduino.lekirbot_findline = function() {
 	var sensor = Blockly.Arduino.valueToCode(this, 'Sensor', Blockly.Arduino.ORDER_ATOMIC);
 	var linef = this.getFieldValue('line');
 	Blockly.Arduino.definitions_['define_lekirbot'] = '#include <lekirbot.h>\n';
-	Blockly.Arduino.definitions_['var_lekirbot'] = 'lekirbot bot((unsigned char[]) { A6, A3, A2, A1, A0} ,5, 4, QTR_NO_EMITTER_PIN);\n';
-	Blockly.Arduino.setups_['lekirbot__minimotor_lib']='bot.Motor(6,5,2,3);';
+	Blockly.Arduino.definitions_['var_lekirbot'] = 'lekirbot bot((unsigned char[]) { sens1, sens2, sens3, sens4, sens5} ,5, 4, QTR_NO_EMITTER_PIN);\n';
+	Blockly.Arduino.setups_['lekirbot__minimotor_lib']='bot.Motor(PWM1, PWM2, dir1, dir2);';
 	if (linef==0)
 	var code='bot.lekirbotflineW('+leftright+', '+leftright+',  '+sensor+','+linef+');\n';
 	else if (linef==1)
@@ -195,7 +195,7 @@ Blockly.Arduino.lekirbot_findline = function() {
 Blockly.Arduino.lekirbot_linesensor = function() {
 	var dropdown_sensor = this.getFieldValue('sensorx');
 	Blockly.Arduino.definitions_['define_lekirbot'] = '#include <lekirbot.h>\n';
-	Blockly.Arduino.definitions_['var_lekirbot'] = 'lekirbot bot((unsigned char[]) { A6, A3, A2, A1, A0} ,5, 4, QTR_NO_EMITTER_PIN);\n';
+	Blockly.Arduino.definitions_['var_lekirbot'] = 'lekirbot bot((unsigned char[]) { sens1, sens2, sens3, sens4, sens5} ,5, 4, QTR_NO_EMITTER_PIN);\n';
 	var code = 'bot.ir_sense('+dropdown_sensor+')';
 	return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
@@ -357,8 +357,8 @@ Blockly.Arduino.lekirbot_path_finder = function() {
 	var fdelay = Blockly.Arduino.valueToCode(this, 'FDelay', Blockly.Arduino.ORDER_ATOMIC);
 	var tdelay = Blockly.Arduino.valueToCode(this, 'TDelay', Blockly.Arduino.ORDER_ATOMIC);
 	Blockly.Arduino.definitions_['define_lekirbot'] = '#include <lekirbot.h>\n';
-	Blockly.Arduino.definitions_['var_lekirbot'] = 'lekirbot bot((unsigned char[]) { A6, A3, A2, A1, A0} ,5, 4, QTR_NO_EMITTER_PIN);\n';  
-	Blockly.Arduino.setups_['lekirbot_motor_lib']='bot.Motor(6,5,2,3);';
+	Blockly.Arduino.definitions_['var_lekirbot'] = 'lekirbot bot((unsigned char[]) { sens1, sens2, sens3, sens4, sens5} ,5, 4, QTR_NO_EMITTER_PIN);\n';  
+	Blockly.Arduino.setups_['lekirbot_motor_lib']='bot.Motor(PWM1, PWM2, dir1, dir2);';
 	// get the device ID, this is just a test to see if we're connected
 	if (linef==0)
 	var code='bot.lekirbotFinderB('+junction+','+action+','+leftright+', '+leftright+', '+turn+', 100, '+kp+','+ kd+', '+sensorthreshold+','+fdelay+','+tdelay+');\n';
