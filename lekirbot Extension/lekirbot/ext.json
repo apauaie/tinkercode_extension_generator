@@ -18,6 +18,13 @@
     "generator": "extensions/lekirbot/generators/lekirbot/lekirbot.js",
     "toolbox": "extensions/lekirbot/toolbox/lekirbot.xml"
   },
+  "libraries": [
+    {
+      "name": "lekirbot",
+      "path": "libraries/lekirbot/"
+    }
+  ],
+
   "version": "0.0.1",
   "license": "MIT",
   "frameworks": "arduino",
