@@ -1,8 +1,8 @@
-goog.provide("Blockly.Blocks.jebatmini");
+goog.provide("Blockly.Blocks.jebatbot");
 
 goog.require("Blockly.Blocks");
 
-Blockly.Blocks.jebatmini.HUE = "#FF8000";
+Blockly.Blocks.jebatbot.HUE = "#FF8000";
 
 var warna=155;
 /*  wifi  */

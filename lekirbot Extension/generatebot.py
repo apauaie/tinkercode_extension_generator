@@ -51,12 +51,14 @@ def load_and_display_image(file_path):
 
 def generate_and_zip():
 	global color_code
-	directory_path = "lekirbot"
+	robotname=clicked.get()
+
+	directory_path = robotname
 	
-	old_text = "lekirbot"
-	new_dir = "lekirbot_duplicate"
+	old_text = robotname
+	new_dir = robotname+"_duplicate"
 	new_name = text_output.get('1.0','end-1c')
-	color_directory_path="lekirbot/extensions/"+new_name+"/blocks/"+new_name+"/"+new_name+".js"
+	color_directory_path=robotname+"/extensions/"+new_name+"/blocks/"+new_name+"/"+new_name+".js"
 	colori= "=\""+color_code+"\""
 	old_color="=155"
 	if (new_name!=""):
@@ -67,8 +69,8 @@ def generate_and_zip():
 		replace_text_in_file(color_directory_path,old_color, colori)
 		print("Block Color Updated successfully.")
 		# print(f"Zip file '{zip_filename}' created.")
-		os.rename("lekirbot",new_name)
-		os.rename("lekirbot_duplicate","lekirbot")
+		os.rename(robotname,new_name)
+		os.rename(robotname+"_duplicate",robotname)
 		file_extensions = [".js", ".xml", ".cpp", ".h",".json"]
 		rename_text_in_files(new_name, old_text, new_name, file_extensions)
 
@@ -170,6 +172,23 @@ def choose_color():
 root = tk.Tk()
 root.title("TinkerCode Extension Generator")
 root.wm_attributes('-toolwindow', True)
+
+
+options = [ 
+    "lekirbot", 
+    "jebatbot"
+] 
+  
+# datatype of menu text 
+clicked = tk.StringVar() 
+  
+# initial menu text 
+clicked.set( "lekirbot" ) 
+  
+# Create Dropdown menu 
+drop = tk.OptionMenu( root , clicked , *options ) 
+drop.pack() 
+
 
 # Create and place the label for displaying the uploaded image
 bot_label = tk.Label(root,text="Bot Name")
