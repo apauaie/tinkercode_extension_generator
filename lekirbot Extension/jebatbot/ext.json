@@ -1,0 +1,33 @@
+{
+  "name": "jebatbot",
+  "keywords": "jebatbot",
+  "description": "Tinkercode Extension for jebatbot",
+  "authors": [
+    {
+      "name": "Fauzan Khairi",
+      "email": "apauaie@gmail.com",
+      "maintainer": true
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apauaie/jebatbot.git"
+  },
+  "files_link": {
+    "block": "extensions/jebatbot/blocks/jebatbot/jebatbot.js",
+    "generator": "extensions/jebatbot/generators/jebatbot/jebatbot.js",
+    "toolbox": "extensions/jebatbot/toolbox/jebatbot.xml"
+  },
+  "libraries": [
+    {
+      "name": "jebatbot",
+      "path": "libraries/jebatbot/"
+    }
+  ],
+
+  "version": "0.0.1",
+  "license": "MIT",
+  "frameworks": "arduino",
+  "platforms": "*",
+  "headers": "jebatbot.h"
+}
