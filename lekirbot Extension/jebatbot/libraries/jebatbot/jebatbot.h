@@ -53,7 +53,12 @@ const int L5 = 4;
 
 //Infrared LineFollow
 
-
+//Infrared LineFollow
+const int sens1 = 35;
+const int sens2 = 33;
+const int sens3 = 36;
+const int sens4 = 34;
+const int sens5 = 39;
 
 
 

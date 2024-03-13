@@ -33,7 +33,7 @@ Blockly.Arduino.jebatbot_ext_button = function() {
 Blockly.Arduino.definitions_['define_jebatbot'] = '#include <jebatbot.h>\n';
 Blockly.Arduino.definitions_['define_extender'] = '#include <PCF8574.h>\n#include <Wire.h>\nPCF8574 pcf20(0x20);\n';
 Blockly.Arduino.setups_['setup_input_extender'] = 'pcf20.begin();';
-  Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  35,33,36,34,39} ,5, 10, QTR_NO_EMITTER_PIN);\n';
+  Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  sens1,sens2,sens3,sens4,sens5} ,5, 10, QTR_NO_EMITTER_PIN);\n';
 
 
     var code = 'bitRead(pcf20.read8(),'+button_pin+')';
@@ -46,7 +46,7 @@ Blockly.Arduino.jebatbot_ext_led = function() {
    Blockly.Arduino.definitions_['define_jebatbot'] = '#include <jebatbot.h>\n';
   Blockly.Arduino.definitions_['define_extender'] = '#include <PCF8574.h>\n#include <Wire.h>\nPCF8574 pcf20(0x20);\n';
   Blockly.Arduino.setups_['setup_input_extender'] = 'pcf20.begin();';
-    Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  35,33,36,34,39} ,5, 10, QTR_NO_EMITTER_PIN);\n';
+    Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  sens1,sens2,sens3,sens4,sens5} ,5, 10, QTR_NO_EMITTER_PIN);\n';
 
   var code = 'pcf20.write('+dropdown_pin+','+ dropdown_stat+');\n'
   return code;
@@ -58,7 +58,7 @@ Blockly.Arduino.jebatbot_ext_stopwatch_run = function() {
   Blockly.Arduino.definitions_['define_extender'] = '#include <PCF8574.h>\n#include <Wire.h>\nPCF8574 pcf20(0x20);\n';
   Blockly.Arduino.definitions_['define_stopwatch'] = 'double i_stopwatch = 0;\ndouble a_stopwatch =millis();\n double c_stopwatch =0;\nint statustimer_stopwatch=3;\n';
   
-    Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  35,33,36,34,39} ,5, 10, QTR_NO_EMITTER_PIN);\n';
+    Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  sens1,sens2,sens3,sens4,sens5} ,5, 10, QTR_NO_EMITTER_PIN);\n';
 
 Blockly.Arduino.definitions_['define_jebatbot_oled'] = '#include "Adafruit_GFX.h"\n#include "Adafruit_SSD1306.h"\nAdafruit_SSD1306 display(128, 32, &Wire, 22);\n'; Blockly.Arduino.definitions_['define_jebatbot_stopwatch_function'] = "void timero(int statustimero){\n"+
  "if (statustimero==0)//start timer\n"+
@@ -117,7 +117,7 @@ Blockly.Arduino.jebatbot_ext_stopwatch_control = function() {
   Blockly.Arduino.definitions_['define_extender'] = '#include <PCF8574.h>\n#include <Wire.h>\nPCF8574 pcf20(0x20);\n';
   Blockly.Arduino.definitions_['define_stopwatch'] = 'double i_stopwatch = 0;\ndouble a_stopwatch =millis();\n double c_stopwatch =0;\nint statustimer_stopwatch=3;\n';
   
-    Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  35,33,36,34,39} ,5, 10, QTR_NO_EMITTER_PIN);\n';
+    Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  sens1,sens2,sens3,sens4,sens5} ,5, 10, QTR_NO_EMITTER_PIN);\n';
 
 Blockly.Arduino.definitions_['define_jebatbot_oled'] = '#include "Adafruit_GFX.h"\n#include "Adafruit_SSD1306.h"\nAdafruit_SSD1306 display(128, 32, &Wire, 22);\n';  Blockly.Arduino.definitions_['define_jebatbot_stopwatch_function'] = "void timero(int statustimero){\n"+
   "if (statustimero==0)//start timer\n"+
@@ -179,7 +179,7 @@ Blockly.Arduino.jebatbot_ext_buzzer = function() {
    Blockly.Arduino.definitions_['define_jebatbot'] = '#include <jebatbot.h>\n';
   Blockly.Arduino.definitions_['define_extender'] = '#include <PCF8574.h>\n#include <Wire.h>\nPCF8574 pcf20(0x20);\n';
   Blockly.Arduino.setups_['setup_input_extender'] = 'pcf20.begin();';
-    Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  35,33,36,34,39} ,5, 10, QTR_NO_EMITTER_PIN);\n';
+    Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  sens1,sens2,sens3,sens4,sens5} ,5, 10, QTR_NO_EMITTER_PIN);\n';
 
   var code = 'pcf20.write(7,'+ dropdown_stat+');\n'
   return code;
@@ -203,7 +203,7 @@ Blockly.Arduino['jebatbot_wifi_upload']=function(block){
 Blockly.Arduino.jebatbot_WS2812B_grid = function() {
   var pin_ledrgb = 16;
   Blockly.Arduino.definitions_['define_jebatbot'] = '#include <jebatbot.h>\n';
-  Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  35,33,36,34,39} ,5, 10, QTR_NO_EMITTER_PIN);\n';
+  Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  sens1,sens2,sens3,sens4,sens5} ,5, 10, QTR_NO_EMITTER_PIN);\n';
 
 
   var code = '';
@@ -219,7 +219,7 @@ Blockly.Arduino.jebatbot_WS2812B_grid = function() {
 Blockly.Arduino.jebatbot_rgb_brightness = function() {
     var percent = Blockly.Arduino.valueToCode(this, 'percent', Blockly.Arduino.ORDER_ATOMIC);
   Blockly.Arduino.definitions_['define_jebatbot'] = '#include <jebatbot.h>\n';
-  Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  35,33,36,34,39} ,5, 10, QTR_NO_EMITTER_PIN);\n';
+  Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  sens1,sens2,sens3,sens4,sens5} ,5, 10, QTR_NO_EMITTER_PIN);\n';
 
   var code = '';
   code += 'bot.brightnessPixyColor('+ percent +');\n';
@@ -232,7 +232,7 @@ Blockly.Arduino.jebatbot_led = function () {
     var dropdown_pin = this.getFieldValue('LEDx');
     var dropdown_color = this.getFieldValue('STAT');
     Blockly.Arduino.definitions_['define_jebatbot'] = '#include <jebatbot.h>\n';
-    Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  35,33,36,34,39} ,5, 10, QTR_NO_EMITTER_PIN);\n';
+    Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  sens1,sens2,sens3,sens4,sens5} ,5, 10, QTR_NO_EMITTER_PIN);\n';
     
 		var rgbHexa = this.getFieldValue('color').replace('#', '');
 // 		code += 'bot.setPixyColor('+ i +', 0x' + rgbHexa + ');\n'
@@ -245,7 +245,7 @@ Blockly.Arduino.jebatbot_led = function () {
 
 Blockly.Arduino.jebatbot_led_clear = function () {
     Blockly.Arduino.definitions_['define_jebatbot'] = '#include <jebatbot.h>\n';
-    Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  35,33,36,34,39} ,5, 10, QTR_NO_EMITTER_PIN);\n';
+    Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  sens1,sens2,sens3,sens4,sens5} ,5, 10, QTR_NO_EMITTER_PIN);\n';
     
 // 		var rgbHexa = this.getFieldValue('color').replace('#', '');
 // 		code += 'bot.setPixyColor('+ i +', 0x' + rgbHexa + ');\n'
@@ -266,7 +266,7 @@ Blockly.Arduino.jebatbot_megablink = function () {
 
     Blockly.Arduino.definitions_['define_jebatbot'] = '#include <jebatbot.h>\n'; //pin 16 5 RGB
     
-    Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  35,33,36,34,39} ,5, 10, QTR_NO_EMITTER_PIN);\n';
+    Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  sens1,sens2,sens3,sens4,sens5} ,5, 10, QTR_NO_EMITTER_PIN);\n';
     var code = 'bot.knightrider(' + value_delay + ','+r+','+g+','+b+');\n'
     return code;
 };
@@ -281,7 +281,7 @@ Blockly.Arduino.jebatbot_knightrider = function () {
 
     Blockly.Arduino.definitions_['define_jebatbot'] = '#include <jebatbot.h>\n'; //pin 16 5 RGB
     
-    Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  35,33,36,34,39} ,5, 10, QTR_NO_EMITTER_PIN);\n';
+    Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  sens1,sens2,sens3,sens4,sens5} ,5, 10, QTR_NO_EMITTER_PIN);\n';
     var code = 'bot.knightrider(' + value_delay + ','+r+','+g+','+b+');\n'
     return code;
 };
@@ -294,7 +294,7 @@ Blockly.Arduino.jebatbot_motor_steer = function() {
     var value_speed = Blockly.Arduino.valueToCode(this, 'SPEED', Blockly.Arduino.ORDER_ATOMIC);
 
  Blockly.Arduino.definitions_['define_jebatbot'] = '#include <jebatbot.h>\n';
-    Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  35,33,36,34,39} ,5, 10, QTR_NO_EMITTER_PIN);\n';
+    Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  sens1,sens2,sens3,sens4,sens5} ,5, 10, QTR_NO_EMITTER_PIN);\n';
    var code = 'bot.motorsteer("'+dropdown_dir+'",'+ value_speed+');\n'
   return code;
 };
@@ -304,7 +304,7 @@ Blockly.Arduino.jebatbot_motor_stop = function() {
     var value_speed = Blockly.Arduino.valueToCode(this, 'SPEED', Blockly.Arduino.ORDER_ATOMIC);
 
  Blockly.Arduino.definitions_['define_jebatbot'] = '#include <jebatbot.h>\n';
-    Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  35,33,36,34,39} ,5, 10, QTR_NO_EMITTER_PIN);\n';
+    Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  sens1,sens2,sens3,sens4,sens5} ,5, 10, QTR_NO_EMITTER_PIN);\n';
    var code = 'bot.motorsteer("STOP",0);\n'
   return code;
 };
@@ -316,7 +316,7 @@ Blockly.Arduino.jebatbot_motor_tank = function() {
       var value_speedr = Blockly.Arduino.valueToCode(this, 'SPEEDR', Blockly.Arduino.ORDER_ATOMIC);
 
  Blockly.Arduino.definitions_['define_jebatbot'] = '#include <jebatbot.h>\n';
-    Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  35,33,36,34,39} ,5, 10, QTR_NO_EMITTER_PIN);\n';
+    Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  sens1,sens2,sens3,sens4,sens5} ,5, 10, QTR_NO_EMITTER_PIN);\n';
    var code = 'bot.motortank("'+dropdown_dirl+'",'+ value_speedl+',"'+dropdown_dirr+'",'+ value_speedr+');\n'
   return code;
 };
@@ -353,7 +353,7 @@ Blockly.Arduino.definitions_['define_jebatbot_ultrasonic'] = "int jebatbot_ultra
 Blockly.Arduino.jebatbot_linesensor = function() {
   var dropdown_sensor = this.getFieldValue('sensorx');
  Blockly.Arduino.definitions_['define_jebatbot'] = '#include <jebatbot.h>\n';
-    Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  35,33,36,34,39} ,5, 10, QTR_NO_EMITTER_PIN);\n';
+    Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  sens1,sens2,sens3,sens4,sens5} ,5, 10, QTR_NO_EMITTER_PIN);\n';
     var code = 'bot.ir_sense('+dropdown_sensor+')';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
@@ -362,7 +362,7 @@ Blockly.Arduino.jebatbot_linesensor = function() {
 Blockly.Arduino.jebatbot_calibrate = function() {
 
  Blockly.Arduino.definitions_['define_jebatbot'] = '#include <jebatbot.h>\n';
-    Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  35,33,36,34,39} ,5, 10, QTR_NO_EMITTER_PIN);\n';
+    Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  sens1,sens2,sens3,sens4,sens5} ,5, 10, QTR_NO_EMITTER_PIN);\n';
 
     Blockly.Arduino.setups_['jebatbot_motor_lib'] = 'bot.Motor(4,23,2,17);';
           // get the device ID, this is just a test to see if we're connected
@@ -384,7 +384,7 @@ Blockly.Arduino.jebatbot_turn_at_center = function() {
 
       
  Blockly.Arduino.definitions_['define_jebatbot'] = '#include <jebatbot.h>\n';
-    Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  35,33,36,34,39} ,5, 10, QTR_NO_EMITTER_PIN);\n';
+    Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  sens1,sens2,sens3,sens4,sens5} ,5, 10, QTR_NO_EMITTER_PIN);\n';
     Blockly.Arduino.setups_['jebatbot_motor_lib']='bot.Motor(4,23,2,17);';
           // get the device ID, this is just a test to see if we're connected
      
@@ -407,7 +407,7 @@ Blockly.Arduino.jebatbot_tracer = function() {
       var sensor = 100;///not used i think , FKCH
       
  Blockly.Arduino.definitions_['define_jebatbot'] = '#include <jebatbot.h>\n';
-    Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  35,33,36,34,39} ,5, 10, QTR_NO_EMITTER_PIN);\n';
+    Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  sens1,sens2,sens3,sens4,sens5} ,5, 10, QTR_NO_EMITTER_PIN);\n';
     Blockly.Arduino.setups_['jebatbot_motor_lib']='bot.Motor(4,23,2,17);';
           // get the device ID, this is just a test to see if we're connected
      
@@ -437,7 +437,7 @@ Blockly.Arduino.jebatbot_tillJunction = function() {
 
       
  Blockly.Arduino.definitions_['define_jebatbot'] = '#include <jebatbot.h>\n';
-    Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  35,33,36,34,39} ,5, 10, QTR_NO_EMITTER_PIN);\n';
+    Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  sens1,sens2,sens3,sens4,sens5} ,5, 10, QTR_NO_EMITTER_PIN);\n';
  
     Blockly.Arduino.setups_['jebatbot_motor_lib'] = 'bot.Motor(4,23,2,17);';
           // get the device ID, this is just a test to see if we're connected
@@ -481,7 +481,7 @@ Blockly.Arduino.jebatbot_path_finder = function() {
 
       
  Blockly.Arduino.definitions_['define_jebatbot'] = '#include <jebatbot.h>\n';
-    Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  35,33,36,34,39} ,5, 10, QTR_NO_EMITTER_PIN);\n';
+    Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  sens1,sens2,sens3,sens4,sens5} ,5, 10, QTR_NO_EMITTER_PIN);\n';
  
     Blockly.Arduino.setups_['jebatbot_motor_lib'] = 'bot.Motor(4,23,2,17);';
           // get the device ID, this is just a test to see if we're connected
@@ -513,7 +513,7 @@ Blockly.Arduino.jebatbot_dtracer = function() {
 
       
  Blockly.Arduino.definitions_['define_jebatbot'] = '#include <jebatbot.h>\n';
-    Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  35,33,36,34,39} ,5, 10, QTR_NO_EMITTER_PIN);\n';
+    Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  sens1,sens2,sens3,sens4,sens5} ,5, 10, QTR_NO_EMITTER_PIN);\n';
  
     Blockly.Arduino.setups_['jebatbot_motor_lib'] = 'bot.Motor(4,23,2,17);';
 
@@ -534,7 +534,7 @@ Blockly.Arduino.jebatbot_findline = function() {
       
       
  Blockly.Arduino.definitions_['define_jebatbot'] = '#include <jebatbot.h>\n';
-    Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  35,33,36,34,39} ,5, 10, QTR_NO_EMITTER_PIN);\n';
+    Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  sens1,sens2,sens3,sens4,sens5} ,5, 10, QTR_NO_EMITTER_PIN);\n';
      Blockly.Arduino.setups_['jebat__minimotor_lib']='bot.Motor(4,23,2,17);';
 
 	 if (linef==0)
