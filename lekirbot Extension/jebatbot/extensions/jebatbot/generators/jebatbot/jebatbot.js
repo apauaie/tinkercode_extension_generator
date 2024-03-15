@@ -201,19 +201,24 @@ Blockly.Arduino['jebatbot_wifi_upload']=function(block){
 
 
 Blockly.Arduino.jebatbot_WS2812B_grid = function() {
-  var pin_ledrgb = 16;
-  Blockly.Arduino.definitions_['define_jebatbot'] = '#include <jebatbot.h>\n';
-  Blockly.Arduino.definitions_['var_jebatbot'] = 'jebatbot bot((unsigned char[]) {  sens1,sens2,sens3,sens4,sens5} ,5, 10, QTR_NO_EMITTER_PIN);\n';
 
-
+  Blockly.Arduino.definitions_['define_tinkerkit_rgb'] = '#include <Adafruit_NeoPixel.h>\n Adafruit_NeoPixel pixels = Adafruit_NeoPixel(5, 4, NEO_GRB + NEO_KHZ800);\n';
+  Blockly.Arduino.setups_['setup_tinkerkit_rgb'] = 'pixels.begin();\n' ;
+  
+  
   var code = '';
   for (var i=0; i<5; i++) {
-	if (this.getFieldValue('Pixel' + i) != 'rgb(255, 255, 255)') {
-		var rgbHexa = this.getFieldValue('Pixel' + i).replace('#', '');
-		code += 'bot.setPixyColor('+ i +', 0x' + rgbHexa + ');\n';
-	}
+  if (this.getFieldValue('Pixel' + i) != 'rgb(255, 255, 255)') {
+    var rgbHexa = this.getFieldValue('Pixel' + i).replace('#', '');
+    code += 'pixels.setPixelColor('+ i +', 0x' + rgbHexa + ');\n';
+  }
+  
   };
+  code +=  'pixels.show();\npixels.show();\n';
+  
   return code;
+
+
 };
 
 Blockly.Arduino.jebatbot_rgb_brightness = function() {
